@@ -1,3 +1,5 @@
+package model;
+
 public class EconomyTicket extends Ticket{
 
     private String chairCode;

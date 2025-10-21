@@ -24,6 +24,40 @@ public class Regular(){
         tickets = new Ticket[10];
     }
 
+    public String getIdUser(){
+
+        return idUser;
+    }
+
+    public boolean countTickets(){
+
+        boolean flag = true;
+
+        for(int i = 0; i < tickets.length && flag; i++){
+
+            if(tickets[i] == null){
+
+                flag = false;
+            }
+        }
+        
+        return flag;
+    }
+
+    public String registerTicket(String airlineName, String flightNumber, String departureCity, String arrivalCity, LocalDate departureDate, double kilometers, String chairCode){
+
+        EconomyTicket temporalEconomyTicket= new EconomyTicket(airlineName, flightNumber, departureCity, arrivalCity, departureDate, kilometers, chairCode);
+        b
+
+        for(int i = 0; i < tickets.length ; i++){
+
+            if(tickets[i] == null){
+
+                tickets[i] = temporalEconomyTicket;
+            }
+        }
+    }
+
     public String toString(){
 
         String userInformation = "";
